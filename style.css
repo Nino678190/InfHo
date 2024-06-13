@@ -1,0 +1,55 @@
+@media (prefers-color-scheme:light){
+    body{
+        background-color: white;
+        color: black;
+    }
+    a{
+        color: black;
+    }
+    button{
+        background-color: white;
+        color: black;
+    }
+}
+
+@media (prefers-color-scheme:dark){
+    body{
+        background-color: black;
+        color: white;
+    }
+    a{
+        color: white;
+    }
+    button{
+        background-color: black;
+        color: white;
+    }
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+.website{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+#linkeingabe{
+    border-radius: 5px;
+}
+
+#linkbutton{
+    border-radius: 5px;
+}
+
+#linkausgabe{
+    border-radius: 5px;
+}

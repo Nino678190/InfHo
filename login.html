@@ -21,14 +21,11 @@
             <img src="#" alt="logo">
             <a href="login.html">Login</a>
         </header>
-        <div class="website">
-            <div>
-                <input type="text" id="linkeingabe" required>
-                <button id="linkbutton" onclick="linksshorten()">Go</button>
-            </div>
-            <div>
-                <input type="text" id="linkausgabe" readonly>
-            </div>
-        </div>
+        <form>
+            <h1>Login</h1>
+            <!-- <a href="signup.html">Registrieren</a> -->
+            <label>Geheimnis</label><input type="password" required placeholder="Geheimnis einfügen"><br>
+            <button onclick="login()">Einloggen</button>
+        </form>
     </body>
 </html>
