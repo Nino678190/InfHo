@@ -23,7 +23,7 @@ function login(){
 }
 
 function urlshort(){
-    var url = document.getElementById("linkeingabe")
+    var url = document.getElementById("linkeingabe").value
     var ausgabe = document.getElementById("linkausgabe")
     fetch("http://192.168.178.105/urlshrt"),{
         method: "POST",
