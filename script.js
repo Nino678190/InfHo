@@ -6,20 +6,19 @@ function login(){
         method: "POST",
         credentials:"same-origin",
         headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({password: hashed})
-        .then(function(res){
-            console.log(res)
-            if (res.status == 200){
-                window.location.href="/loggedin.html";
-            }
-            else{
-                alert("Falsches Geheimnis")
-            }
-        })
-        .catch(function(error) {
-            console.error('Error:', error);
-        }),
-    }
+        body: JSON.stringify({password: hashed})}
+    .then(function(res){
+        console.log(res)
+        if (res.status == 200){
+            window.location.href="/loggedin.html";
+        }
+        else{
+            alert("Falsches Geheimnis")
+        }
+    })
+    .catch(function(error) {
+        console.error('Error:', error);
+    })
 }
 
 function urlshort(){
@@ -30,19 +29,19 @@ function urlshort(){
         credentials: "same-origin",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({url: url})
-        .then(function(res){
-            console.log(res)
-            if (res.status == 200){
-                res.json().then((data) => {
-                    ausgabe.innerHTML(data.shorturl)
-                })
-            }
-            else{
-                alert("Fehler")
-            }
-        })
-        .catch(function(error) {
-            console.error('Error:', error);
-        }),
     }
+    .then(function(res){
+        console.log(res)
+        if (res.status == 200){
+            res.json().then((data) => {
+                ausgabe.innerHTML(data.shorturl)
+            })
+        }
+        else{
+            alert("Fehler")
+        }
+    })
+    .catch(function(error) {
+        console.error('Error:', error);
+    })
 }
