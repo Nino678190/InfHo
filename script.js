@@ -24,13 +24,12 @@ function login(){
 function urlshort(){
     var url = document.getElementById("linkeingabe").value
     var ausgabe = document.getElementById("linkausgabe")
-    fetch("http://192.168.178.105/urlshrt"),{
+    fetch("http://192.168.178.105/urlshrt",{
         method: "POST",
         credentials: "same-origin",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({url: url})
-    }
-    .then(function(res){
+    }).then(function(res){
         console.log(res)
         if (res.status == 200){
             res.json().then((data) => {
