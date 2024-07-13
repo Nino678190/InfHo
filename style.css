@@ -43,13 +43,21 @@ header{
 }
 
 #linkeingabe{
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
 #linkbutton{
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
 #linkausgabe{
-    border-radius: 5px;
+    border-radius: 20px;
+}
+
+.container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    text-align: center;
 }
