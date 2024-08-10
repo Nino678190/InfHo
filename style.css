@@ -26,6 +26,11 @@
     }
 }
 
+body{
+    width: 100%;
+    height: 100%;
+}
+
 header{
     display: flex;
     justify-content: center;
@@ -44,6 +49,9 @@ header{
 
 #linkeingabe{
     border-radius: 20px;
+    /* Funktioniert nur in Chrome, Edge, Opera. Wird sonst ignoriert */
+    field-sizing: content;
+    min-width: 20px;
 }
 
 #linkbutton{
@@ -55,9 +63,10 @@ header{
 }
 
 .container{
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center;
     align-items: center;
     text-align: center;
+    max-width: 75%;
 }
