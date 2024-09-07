@@ -33,10 +33,11 @@ body{
 
 header{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     align-items: center;
     text-align: center;
+    margin: 10px;
 }
 
 .website{
@@ -51,15 +52,19 @@ header{
     border-radius: 20px;
     /* Funktioniert nur in Chrome, Edge, Opera. Wird sonst ignoriert */
     field-sizing: content;
-    min-width: 20px;
+    width: clamp(100px, 50%, 200px);
+    margin: 10px;
 }
 
 #linkbutton{
     border-radius: 20px;
+    margin: 10px;
+    width: 50px;
 }
 
 #linkausgabe{
     border-radius: 20px;
+    margin: 10px;
 }
 
 .container{

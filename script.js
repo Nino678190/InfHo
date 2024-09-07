@@ -22,25 +22,26 @@ function login(){
 }
 
 function urlshort(){
-    var url = document.getElementById("linkeingabe").value
-    var ausgabe = document.getElementById("linkausgabe")
-    fetch("http://192.168.178.105/urlshrt",{
-        method: "POST",
-        credentials: "same-origin",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify({url: url})
-    }).then(function(res){
-        console.log(res)
-        if (res.status == 200){
-            res.json().then((data) => {
-                ausgabe.innerHTML(data.shorturl)
-            })
-        }
-        else{
-            alert("Fehler")
-        }
-    })
-    .catch(function(error) {
-        console.error('Error:', error);
-    })
-}
+    if (document.getElementById("linkeingabe").value !== ""){
+        var url = document.getElementById("linkeingabe").value
+        var ausgabe = document.getElementById("linkausgabe")
+        fetch("http://192.168.178.105/urlshrt",{
+            method: "POST",
+            credentials: "same-origin",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({url: url})
+        }).then(function(res){
+            console.log(res)
+            if (res.status == 200){
+                res.json().then((data) => {
+                    ausgabe.innerHTML(data.shorturl)
+                })
+            }
+            else{
+                alert("Fehler")
+            }
+        })
+        .catch(function(error) {
+            console.error('Error:', error);
+        })
+}};
