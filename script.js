@@ -1,7 +1,7 @@
 function login(){
     var pw = document.getElementbyID("password");
     var hashed = sha256(pw)
-    fetch("http://192.168.178.105/login"),
+    fetch("http://192.168.178.105\login"),
     {
         method: "POST",
         credentials:"same-origin",
@@ -25,7 +25,7 @@ function urlshort(){
     if (document.getElementById("linkeingabe").value !== ""){
         var url = document.getElementById("linkeingabe").value
         var ausgabe = document.getElementById("linkausgabe")
-        fetch("http://192.168.178.105/urlshrt",{
+        fetch("http://192.168.178.105\urlshrt",{
             method: "POST",
             credentials: "same-origin",
             headers: {"Content-Type": "application/json"},
